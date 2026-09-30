@@ -1,0 +1,23 @@
+{
+    "ROS2.distro": "jazzy",
+    "python.autoComplete.extraPaths": [
+        "/media/galdrux/galdrux_storage/gazebo_proj/ros2_sim_control_ws/build/mobile_robot_control",
+        "/media/galdrux/galdrux_storage/gazebo_proj/ros2_sim_control_ws/install/mobile_robot_control/lib/python3.12/site-packages",
+        "/opt/ros/jazzy/opt/gz_sim_vendor/lib/python",
+        "/opt/ros/jazzy/opt/sdformat_vendor/lib/python",
+        "/opt/ros/jazzy/opt/gz_transport_vendor/lib/python",
+        "/opt/ros/jazzy/opt/gz_msgs_vendor/lib/python",
+        "/opt/ros/jazzy/opt/gz_math_vendor/lib/python",
+        "/opt/ros/jazzy/lib/python3.12/site-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/media/galdrux/galdrux_storage/gazebo_proj/ros2_sim_control_ws/build/mobile_robot_control",
+        "/media/galdrux/galdrux_storage/gazebo_proj/ros2_sim_control_ws/install/mobile_robot_control/lib/python3.12/site-packages",
+        "/opt/ros/jazzy/opt/gz_sim_vendor/lib/python",
+        "/opt/ros/jazzy/opt/sdformat_vendor/lib/python",
+        "/opt/ros/jazzy/opt/gz_transport_vendor/lib/python",
+        "/opt/ros/jazzy/opt/gz_msgs_vendor/lib/python",
+        "/opt/ros/jazzy/opt/gz_math_vendor/lib/python",
+        "/opt/ros/jazzy/lib/python3.12/site-packages"
+    ]
+}

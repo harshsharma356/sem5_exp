@@ -1,0 +1,3 @@
+[console_scripts]
+pub_node = py_pubsub.publisher_member_function:main
+sub_node = py_pubsub.subscriber_member_function:main

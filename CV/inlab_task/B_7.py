@@ -1,0 +1,26 @@
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+img = cv2.imread("/media/galdrux/galdrux_storage/sem_5/CV/dataset/satellite_9.jpg")
+gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+noise = np.random.normal(0, 25, gray.shape)
+noisy = gray.astype(np.float32) + noise
+noisy = np.clip(noisy, 0, 255).astype(np.uint8)
+blurred = cv2.GaussianBlur(noisy, (5, 5), 0)
+canny_noisy = cv2.Canny(noisy, 50, 150)
+canny_blurred = cv2.Canny(blurred, 50, 150)
+plt.figure(figsize=(12, 4))
+plt.subplot(1, 3, 1)
+plt.imshow(noisy, cmap="gray")
+plt.title("Noisy Image")
+plt.axis("off")
+plt.subplot(1, 3, 2)
+plt.imshow(canny_noisy, cmap="gray")
+plt.title("Canny on Noisy Image")
+plt.axis("off")
+plt.subplot(1, 3, 3)
+plt.imshow(canny_blurred, cmap="gray")
+plt.title("Gaussian Blur + Canny")
+plt.axis("off")
+plt.tight_layout()
+plt.show()

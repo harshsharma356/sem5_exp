@@ -1,0 +1,25 @@
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+img = cv2.imread("/media/galdrux/galdrux_storage/sem_5/CV/dataset/satellite_9.jpg")
+gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+noise = np.random.normal(0, 25, gray.shape)
+noisy = gray.astype(np.float32) + noise
+noisy = np.clip(noisy, 0, 255).astype(np.uint8)
+canny_clean = cv2.Canny(gray, 50, 150)
+canny_noisy = cv2.Canny(noisy, 50, 150)
+plt.figure(figsize=(12, 4))
+plt.subplot(1, 3, 1)
+plt.imshow(gray, cmap="gray")
+plt.title("Clean Image")
+plt.axis("off")
+plt.subplot(1, 3, 2)
+plt.imshow(canny_clean, cmap="gray")
+plt.title("Canny Clean")
+plt.axis("off")
+plt.subplot(1, 3, 3)
+plt.imshow(canny_noisy, cmap="gray")
+plt.title("Canny Noisy")
+plt.axis("off")
+plt.tight_layout()
+plt.show()
